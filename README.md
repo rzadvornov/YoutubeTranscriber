@@ -47,4 +47,4 @@ For support issues, feature requests, or general feedback:
 - Submit bug reports on our GitHub repository
 
 ## License
-Assembly MP3 to Text Converter is free software distributed under the MIT License. See the LICENSE file for details.
+Youtube Transcriber is free software distributed under the MIT License. See the LICENSE file for details.
