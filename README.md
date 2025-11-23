@@ -1,7 +1,7 @@
-# Assembly MP3 to Text Converter
+# Youtube Transcriber
 
 ## Overview
-Assembly MP3 to Text Converter is a powerful and intuitive application designed to convert spoken audio from MP3 files into accurate text transcriptions. Built with speech recognition technology optimized for multiple languages, this tool helps you quickly transcribe interviews, lectures, meetings, and other audio recordings.
+Youtube Transcriber is a powerful and intuitive application designed to convert spoken audio from MP3 files into accurate text transcriptions. Built with speech recognition technology optimized for multiple languages, this tool helps you quickly transcribe interviews, lectures, meetings, and other audio recordings.
 
 ## Features
 - **Download MP3 from Youtube**: Downloads MP3 files from Youtube for transcription process
