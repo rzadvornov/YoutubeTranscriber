@@ -1,0 +1,69 @@
+graph TB
+    subgraph "User Interface"
+        CLI[Command Line Interface]
+        InputHandler[URL Input Handler]
+    end
+    
+    subgraph "Core Processing"
+        URLValidator[YouTube URL Validator]
+        VideoFetcher[Video Metadata Fetcher]
+        AudioExtractor[Audio Stream Extractor]
+    end
+    
+    subgraph "Audio Processing"
+        AudioDownloader[Audio Downloader]
+        FormatConverter[Audio Format Converter]
+        AudioProcessor[Audio Preprocessor]
+    end
+    
+    subgraph "Transcription Engine"
+        SpeechRecognition[Speech Recognition API]
+        TranscriptionEngine[Transcription Engine]
+        TextProcessor[Text Post-Processor]
+    end
+    
+    subgraph "Output Management"
+        TextFormatter[Text Formatter]
+        FileWriter[File Writer]
+        OutputHandler[Output Handler]
+    end
+    
+    subgraph "External Services"
+        YouTubeAPI[YouTube API]
+        SpeechAPI[Speech-to-Text Service]
+    end
+    
+    subgraph "Storage"
+        TempStorage[Temporary Audio Storage]
+        OutputFiles[Transcription Text Files]
+    end
+    
+    CLI --> InputHandler
+    InputHandler --> URLValidator
+    
+    URLValidator --> VideoFetcher
+    VideoFetcher --> YouTubeAPI
+    
+    VideoFetcher --> AudioExtractor
+    AudioExtractor --> AudioDownloader
+    
+    AudioDownloader --> TempStorage
+    TempStorage --> FormatConverter
+    FormatConverter --> AudioProcessor
+    
+    AudioProcessor --> TranscriptionEngine
+    TranscriptionEngine --> SpeechRecognition
+    SpeechRecognition --> SpeechAPI
+    
+    SpeechAPI --> TextProcessor
+    TextProcessor --> TextFormatter
+    
+    TextFormatter --> FileWriter
+    FileWriter --> OutputFiles
+    OutputFiles --> OutputHandler
+    OutputHandler --> CLI
+    
+    style TranscriptionEngine fill:#ea4335
+    style YouTubeAPI fill:#ff0000
+    style SpeechAPI fill:#4285f4
+    style OutputFiles fill:#34a853
